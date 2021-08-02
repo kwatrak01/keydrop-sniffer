@@ -13,7 +13,6 @@
         <TextBox x:Name="DCTokenInput" HorizontalAlignment="Center" BorderThickness="2" BorderBrush="#FFB4B8CD" Margin="0,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Background="#FF111114" Height="24" Foreground="#FFDCAE64" TextAlignment="Center" FontFamily="Nirmala UI" FontWeight="Bold" SelectionBrush="#FFB4B8CD"/>
         <Label Content="Token Discord" HorizontalAlignment="Left" Margin="180,249,0,0" VerticalAlignment="Top" Width="124" Foreground="#FF767676"/>
         <Button x:Name="SaveCfgButton" Content="Zapisz konfiguracje" BorderThickness="0" HorizontalAlignment="Center" Margin="0,343,0,0" VerticalAlignment="Top" Width="202" Background="#FFDCAE64" Height="30" FontFamily="Nirmala UI" FontWeight="Normal" Click="SaveCfgButton_Click"/>
-        <Label Content="Jeśli masz problem z konfiguracją, kliknij tutaj dwa razy, aby obejrzeć poradnik" HorizontalAlignment="Center" Margin="0,415,0,0" VerticalAlignment="Top" Foreground="#FF7E7E7E" MouseDoubleClick="Label_MouseDoubleClick"/>
 
     </Grid>
 </UserControl>

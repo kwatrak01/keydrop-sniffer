@@ -135,18 +135,5 @@ namespace KeyDrop_Sniffer.views
                 MessageBox.Show("Nie można zapisać konfiguracji!");
             }
         }
-
-        private void Label_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            Process myProcess = new Process();
-
-            try
-            {
-                myProcess.StartInfo.UseShellExecute = true;
-                myProcess.StartInfo.FileName = "https://www.youtube.com/watch?v=KvJzQZGm0uE";
-                myProcess.Start();
-            }
-            catch (Exception) { }
-        }
     }
 }
