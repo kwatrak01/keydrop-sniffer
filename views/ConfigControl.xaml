@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="KeyDrop_Sniffer.views.ConfigControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KeyDrop_Sniffer.views"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="690">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="622" Foreground="#FFD1D1D1" FontFamily="Nirmala UI" FontWeight="Bold" FontSize="14" TextAlignment="Center"><Run Text="Witaj "/><Run Language="pl-pl" Text="w konfiguratorze programu Keydrop Sniffer. Zanim zaczniesz korzystać, musisz skonfigurować swoje konto w serwisie KeyDrop oraz token Discord"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="CookieInput" HorizontalAlignment="Center" BorderThickness="2" BorderBrush="#FFB4B8CD" Margin="0,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Background="#FF111114" Height="24" Foreground="#FFDCAE64" TextAlignment="Center" FontFamily="Nirmala UI" FontWeight="Bold" SelectionBrush="#FFB4B8CD"/>
+        <Label Content="Ciasteczka KeyDrop" HorizontalAlignment="Left" Margin="180,173,0,0" VerticalAlignment="Top" Width="124" Foreground="#FF767676"/>
+        <TextBox x:Name="DCTokenInput" HorizontalAlignment="Center" BorderThickness="2" BorderBrush="#FFB4B8CD" Margin="0,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Background="#FF111114" Height="24" Foreground="#FFDCAE64" TextAlignment="Center" FontFamily="Nirmala UI" FontWeight="Bold" SelectionBrush="#FFB4B8CD"/>
+        <Label Content="Token Discord" HorizontalAlignment="Left" Margin="180,249,0,0" VerticalAlignment="Top" Width="124" Foreground="#FF767676"/>
+        <Button x:Name="SaveCfgButton" Content="Zapisz konfiguracje" BorderThickness="0" HorizontalAlignment="Center" Margin="0,343,0,0" VerticalAlignment="Top" Width="202" Background="#FFDCAE64" Height="30" FontFamily="Nirmala UI" FontWeight="Normal" Click="SaveCfgButton_Click"/>
+        <Label Content="Jeśli masz problem z konfiguracją, kliknij tutaj dwa razy, aby obejrzeć poradnik" HorizontalAlignment="Center" Margin="0,415,0,0" VerticalAlignment="Top" Foreground="#FF7E7E7E" MouseDoubleClick="Label_MouseDoubleClick"/>
+
+    </Grid>
+</UserControl>

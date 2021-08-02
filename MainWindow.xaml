@@ -1,0 +1,70 @@
+﻿<Window x:Name="GlobalWindow" x:Class="KeyDrop_Sniffer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeyDrop_Sniffer"
+        mc:Ignorable="d"
+        Title="KeyDrop Sniffer" Height="550" Width="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" Closing="GlobalWindow_Closing">
+
+    <Window.Resources>
+        <Style x:Key="CustomBtn" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid x:Name="GlobalGrid">
+        <Rectangle x:Name="Background" HorizontalAlignment="Center" Height="550" Stroke="Black" VerticalAlignment="Center" Width="900" RadiusY="15" RadiusX="15" Fill="#FF111114"/>
+        <StackPanel x:Name="SideMenu" HorizontalAlignment="Left" Height="550" VerticalAlignment="Center" Width="210" Background="#FF19181E">
+            <Grid x:Name="Header" Height="45" Margin="0,20,0,0">
+                <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" FontFamily="Bahnschrift" Foreground="#FFDCAE64"><Run Language="pl-pl" Text="KeyDrop Sniffer"/></TextBlock>
+            </Grid>
+            <Grid x:Name="Menu" Margin="0,60,0,0" Height="Auto">
+                <StackPanel x:Name="Content">
+                    <Button Style="{StaticResource CustomBtn}" x:Name="HomeButton" Height="45" Cursor="Hand" Background="{x:Null}" BorderThickness="0" Uid="home">
+                        <DockPanel Width="177">
+                            <Image Height="16" Width="16" Margin="0,0,0,0" Source="/icons/home.png"/>
+                            <TextBlock TextWrapping="Wrap" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFB4B8CD" Width="119.5"><Run Language="pl-pl" Text="STRONA DOMOWA"/></TextBlock>
+                        </DockPanel>
+                    </Button>
+                    <Button Style="{StaticResource CustomBtn}" x:Name="HistoryButton" Height="45" Cursor="Hand" Background="{x:Null}" BorderThickness="0" Uid="history">
+                        <DockPanel Width="177">
+                            <Image Height="16" Width="16" Margin="0,0,0,0" Source="/icons/history.png"/>
+                            <TextBlock TextWrapping="Wrap" Margin="10,0,0,0" Foreground="#FFB4B8CD" Width="120"><Run Language="pl-pl" Text="HISTORIA KODÓW"/></TextBlock>
+                        </DockPanel>
+
+                    </Button>
+                    <Button Style="{StaticResource CustomBtn}" x:Name="SettingsButton" Height="45" Cursor="Hand" Background="{x:Null}" BorderThickness="0" Uid="settings">
+                        <DockPanel Width="177">
+                            <Image Height="16" Width="16" Margin="0,0,0,0" Source="/icons/settings.png"/>
+                            <TextBlock TextWrapping="Wrap" Margin="10,0,0,0" Foreground="#FFB4B8CD" Width="120"><Run Language="pl-pl" Text="USTAWIENIA"/></TextBlock>
+                        </DockPanel>
+                    </Button>
+                    <Button Style="{StaticResource CustomBtn}" x:Name="ShutdownButton" Height="45" Cursor="Hand" Background="{x:Null}" BorderThickness="0" Uid="settings" Click="ShutdownButton_Click">
+                        <DockPanel Width="177">
+                            <Image Height="16" Width="16" Margin="0,0,0,0" Source="/power (1).png"/>
+                            <TextBlock TextWrapping="Wrap" Margin="10,0,0,0" Foreground="#FFB4B8CD" Width="120"><Run Language="pl-pl" Text="ZAMKNIJ APLIKACJE"/></TextBlock>
+                        </DockPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <ContentControl x:Name="ContentManager" Content="ContentControl" HorizontalAlignment="Left" Margin="210,0,0,0" VerticalAlignment="Center" Height="550" Width="690"/>
+
+    </Grid>
+</Window>

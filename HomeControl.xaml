@@ -1,0 +1,33 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KeyDrop_Sniffer"
+             xmlns:System="clr-namespace:System;assembly=System.Runtime" x:Class="KeyDrop_Sniffer.HomeControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="690">
+    <Grid>
+        <ComboBox x:Name="CodeSource" HorizontalAlignment="Left" Margin="70,76,0,0" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" VerticalAlignment="Top" Width="142" Background="#FF19181E" BorderBrush="#FFDCAE64" Foreground="#FFB4B8CD">
+            <System:String>Discord</System:String>
+        </ComboBox>
+        <Label Content="Źródło kodów" HorizontalAlignment="Left" Margin="70,45,0,0" VerticalAlignment="Top" Width="142" Foreground="#FFB4B4B4"/>
+        <TextBox x:Name="CodeCount" TextAlignment="Center" HorizontalAlignment="Left" Margin="238,76,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" Height="22" Background="#FF19181E" BorderBrush="#FFDCAE64" Foreground="#FFB4B8CD" SelectionBrush="#FFDCAE64"/>
+        <Label Content="Ilość kodów" HorizontalAlignment="Left" Margin="238,45,0,0" VerticalAlignment="Top" Width="84" Foreground="#FFB4B4B4"/>
+        <Button x:Name="RunButton" Content="Uruchom machinę" HorizontalAlignment="Left" Margin="484,71,0,0" VerticalAlignment="Top" Width="118" Height="32" Click="RunButton_Click" BorderBrush="Transparent" Background="#FFDCAE64" Foreground="#FFFFFFFF"/>
+        <Separator HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top" Height="20" Width="550"/>
+        <RichTextBox x:Name="HomeLogBox" Margin="70,128,70,128" IsReadOnly="True" Background="#FF19181E" BorderBrush="#FFDCAE64" Foreground="#FFB4B8CD" SelectionBrush="#FFDCAE64">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label x:Name="AwardedGold" Content="0" HorizontalAlignment="Left" Margin="258,444,0,0" VerticalAlignment="Top" Background="Transparent" Foreground="White" FontSize="14" FontWeight="Bold" FontFamily="Nirmala UI"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="234,447,0,0" VerticalAlignment="Top" Width="24" Source="/ezgif.com-gif-maker.png"/>
+        <TextBox x:Name="CodeInterval" HorizontalAlignment="Left" Margin="345,76,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Height="22" Background="#FF19181E" BorderBrush="#FFDCAE64" Foreground="#FFB4B8CD" SelectionBrush="#FFDCAE64" TextAlignment="Center"/>
+        <Label Content="Czas sprawdzania (sek)" HorizontalAlignment="Left" Margin="345,45,0,0" VerticalAlignment="Top" Width="134" Foreground="#FFB4B4B4"/>
+        <Label x:Name="AwardedDeposit" Content="0.00 PLN" HorizontalAlignment="Left" Margin="403,444,0,0" VerticalAlignment="Top" Background="Transparent" Foreground="#FFD6F025" FontSize="14" FontFamily="Nirmala UI" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="20" Margin="379,447,0,0" VerticalAlignment="Top" Width="20" Source="/wallet.png" RenderTransformOrigin="2.85,0.45"/>
+    </Grid>
+</UserControl>
